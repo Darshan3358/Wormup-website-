@@ -45,11 +45,9 @@ if (process.env.ENABLE_WORKER === 'true') {
   }
 }
 
-if (!process.env.VERCEL) {
-  const PORT = process.env.PORT || 5000;
-  server.listen(PORT, () => {
-    console.log(`🥦 Womup Quick-Commerce Server running on http://localhost:${PORT}`);
-  });
-}
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+  console.log(`🥦 Womup Quick-Commerce Server running on http://localhost:${PORT}`);
+});
 
 export default app;
